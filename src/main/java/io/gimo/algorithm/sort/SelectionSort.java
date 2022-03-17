@@ -7,18 +7,18 @@ package io.gimo.algorithm.sort;
  */
 public class SelectionSort<T extends Comparable<T>> {
 
-    public static <T extends Comparable<T>> void sort(T[] array) {
-        for (int i = 0; i < array.length; i++) {
-            int minPos = i;
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[j].compareTo(array[minPos]) < 0) {
-                    minPos = j;
+    public static <T extends Comparable<T>> void sort(T[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j].compareTo(arr[minIndex]) < 0) {
+                    minIndex = j;
                 }
             }
-            if (minPos != i) {
-                T temp = array[minPos];
-                array[minPos] = array[i];
-                array[i] = temp;
+            if (minIndex != i) {
+                T aux = arr[minIndex];
+                arr[minIndex] = arr[i];
+                arr[i] = aux;
             }
         }
     }
