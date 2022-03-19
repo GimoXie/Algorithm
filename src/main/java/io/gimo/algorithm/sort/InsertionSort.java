@@ -1,13 +1,13 @@
 package io.gimo.algorithm.sort;
 
+import io.gimo.algorithm.AlgoHelper;
+
 public class InsertionSort<T extends Comparable<T>> {
 
     public static <T extends Comparable<T>> void sort(T[] arr) {
         for (int i = 1; i < arr.length; i++) {
-            for (int j = i - 1; j > 0 && arr[j].compareTo(arr[j - 1]) < 0; j--) {
-                T aux = arr[j];
-                arr[j] = arr[j - 1];
-                arr[j - 1] = aux;
+            for (int j = i; j > 0 && arr[j].compareTo(arr[j - 1]) < 0; j--) {
+                AlgoHelper.swap(arr, j - 1, j);
             }
         }
     }
