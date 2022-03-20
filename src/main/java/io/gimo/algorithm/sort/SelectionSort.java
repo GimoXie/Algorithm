@@ -1,5 +1,7 @@
 package io.gimo.algorithm.sort;
 
+import io.gimo.algorithm.AlgoHelper;
+
 /**
  * 选择排序
  * 从当前元素开始 找出最小的元素和当前元素交换位置
@@ -16,9 +18,7 @@ public class SelectionSort<T extends Comparable<T>> {
                 }
             }
             if (minIndex != i) {
-                T aux = arr[minIndex];
-                arr[minIndex] = arr[i];
-                arr[i] = aux;
+                AlgoHelper.swap(arr, minIndex, i);
             }
         }
     }

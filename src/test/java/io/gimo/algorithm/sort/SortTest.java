@@ -6,7 +6,7 @@ public class SortTest {
 
     public static void main(String[] args) {
         Integer[] arr = SortTestHelper.generateRandomArray(10, 0, 30);
-        ShellSort.sort(arr);
+        QuickSort.sort(arr);
         System.out.println(Arrays.toString(arr));
     }
 }
