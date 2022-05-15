@@ -5,7 +5,7 @@ import java.util.List;
 
 public class NQueens {
 
-    private List<char[][]> boards = new ArrayList<>();
+    private final List<char[][]> boards = new ArrayList<>();
     private int width;
 
     private List<List<String>> solveNQueens(int n) {
@@ -84,7 +84,7 @@ public class NQueens {
 
     public static void main(String[] args) {
         NQueens queen = new NQueens();
-        queen.solveNQueens(8);
+        queen.solveNQueens(9);
     }
 
 }
