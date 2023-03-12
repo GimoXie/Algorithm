@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Permute {
 
-    private List<List<Integer>> res = new LinkedList<>();
+    private final List<List<Integer>> res = new LinkedList<>();
 
     public List<List<Integer>> permute(int[] nums) {
         backtrack(nums, new LinkedList<>());
